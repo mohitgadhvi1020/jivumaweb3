@@ -15,7 +15,7 @@ const CartSummary: React.FC<CartSummaryProps> = ({ onCheckout, isCheckingOut = f
   const router = useRouter();
   const { getTotalPrice, getSubtotalPrice, getSavingsAmount, getDeliveryCharge, getTotalQuantity, hasMinimumOrder, getFinalTotal } = useCart();
   const [couponCode, setCouponCode] = useState('');
-  const [showCouponInput, setShowCouponInput] = useState(false);
+  const [showCouponInput] = useState(false);
   const [couponError, setCouponError] = useState('');
   const [couponDiscount, setCouponDiscount] = useState(0);
   const [localIsCheckingOut, setLocalIsCheckingOut] = useState(false);

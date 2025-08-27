@@ -59,7 +59,7 @@ export default async function Home() {
           <div className="text-center mt-16">
             <div className="inline-flex items-center space-x-4 bg-white/70 backdrop-blur-sm rounded-full px-8 py-4 shadow-premium">
               <span className="text-jivuma-brown font-body">
-                Can't find what you're looking for?
+                Can&apos;t find what you&apos;re looking for?
               </span>
               <a
                 href="/contact"

@@ -1,8 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Link from 'next/link';
-import Image from 'next/image';
+
 import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -31,7 +30,7 @@ export default function RootLayout({
       <head>
         <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
       </head>
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className}`} suppressHydrationWarning={true}>
         <CartProvider>
           <div className="min-h-screen flex flex-col">
             <Navbar />
