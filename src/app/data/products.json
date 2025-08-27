@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Butter Chicken Mix",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Delicious and authentic butter chicken spice mix for a rich and creamy curry",
+    "image": "/images/jivuma-products/Butter Chicken Mix.png"
+  },
+  {
+    "id": 2,
+    "name": "Paneer Butter Masala",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Creamy and flavorful paneer butter masala mix for a perfect vegetarian delight",
+    "image": "/images/jivuma-products/Paneer Butter Masala.png"
+  },
+  {
+    "id": 3,
+    "name": "Chicken Biryani Mix",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Aromatic spice blend for preparing authentic chicken biryani at home",
+    "image": "/images/jivuma-products/Chicken Biryani Mix.png"
+  },
+  {
+    "id": 4,
+    "name": "Veg Biryani",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Perfectly balanced spice mix for a delicious vegetable biryani",
+    "image": "/images/jivuma-products/Veg Biryani.png"
+  },
+  {
+    "id": 5,
+    "name": "Paneer Tikka Masala",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Authentic spice blend for the popular paneer tikka masala dish",
+    "image": "/images/jivuma-products/Paneer Tikka Masala.png"
+  },
+  {
+    "id": 6,
+    "name": "Rajma Masala",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Traditional spice mix for preparing delicious rajma curry",
+    "image": "/images/jivuma-products/Rajma Masala.png"
+  },
+  {
+    "id": 7,
+    "name": "Chhole - Chana Gravy",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Perfect blend for making authentic Punjabi chhole or chana masala",
+    "image": "/images/jivuma-products/Chhole - Chana Gravy.png"
+  },
+  {
+    "id": 8,
+    "name": "Vegetable Kadai Mix",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Flavorful spice mix for preparing restaurant-style kadai vegetables",
+    "image": "/images/jivuma-products/Vegetable Kadai Mix.png"
+  },
+  {
+    "id": 9,
+    "name": "Paneer Bhurji",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Spice mix for quick and delicious scrambled paneer preparation",
+    "image": "/images/jivuma-products/Paneer Bhurji.png"
+  },
+  {
+    "id": 10,
+    "name": "Kashmiri Dum Aloo",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Authentic Kashmiri spice blend for preparing flavorful dum aloo",
+    "image": "/images/jivuma-products/Kashmiri Dum Aloo.png"
+  },
+  {
+    "id": 11,
+    "name": "Chicken Gravy Mix",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Versatile spice blend for preparing various chicken curry dishes",
+    "image": "/images/jivuma-products/Chicken Gravy Mix.png"
+  },
+  {
+    "id": 12,
+    "name": "Mutton Gravy Mix",
+    "price": 45,
+    "discountPrice": 40,
+    "description": "Rich and aromatic spice blend for perfect mutton curry",
+    "image": "/images/jivuma-products/Mutton Gravy Mix.png"
+  }
+] 
