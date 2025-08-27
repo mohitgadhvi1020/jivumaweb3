@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -85,7 +86,7 @@ const ContactPage: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-jivuma-brown/70 max-w-2xl mx-auto"
           >
-            We'd love to hear from you! Reach out to us for any questions about our premium spice mixes
+            We&apos;d love to hear from you! Reach out to us for any questions about our premium spice mixes
             or to place a custom order.
           </motion.p>
         </div>
@@ -225,7 +226,7 @@ const ContactPage: React.FC = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-jivuma-brown mb-2">Message Sent!</h3>
-                <p className="text-jivuma-brown/70">We'll get back to you soon.</p>
+                <p className="text-jivuma-brown/70">We&apos;ll get back to you soon.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -341,7 +342,7 @@ const ContactPage: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <a 
+            <Link 
               href="/#menu" 
               className="btn-secondary inline-flex items-center text-lg px-8 py-4"
             >
@@ -349,7 +350,7 @@ const ContactPage: React.FC = () => {
               <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </motion.div>
