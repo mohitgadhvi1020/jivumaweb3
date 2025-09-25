@@ -75,7 +75,7 @@ const CheckoutPage: React.FC = () => {
   const { items, getTotalPrice, getFinalTotal, getDeliveryCharge, getTotalQuantity, hasMinimumOrder, clearCart } = useCart();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState<'cod' | 'whatsapp'>('whatsapp');
+  const [paymentMethod, setPaymentMethod] = useState<'whatsapp'>('whatsapp');
 
   const [customer, setCustomer] = useState<Customer>({
     name: '',
@@ -142,18 +142,8 @@ Please confirm this order and share payment details. Thank you! 🙏`;
     
     setIsSubmitting(true);
     
-    // Check payment method and handle accordingly
-    if (paymentMethod === 'cod') {
-      // Handle Cash on Delivery
-      setTimeout(() => {
-        setFormSubmitted(true);
-        clearCart();
-        setIsSubmitting(false);
-      }, 1500);
-    } else {
-      // Handle Online payments (UPI, WhatsApp, Bank)
-      handleOnlinePayment();
-    }
+    // Handle WhatsApp order
+    handleOnlinePayment();
     
     // Comment out the API call for demonstration purposes
     /*
@@ -197,10 +187,7 @@ Please confirm this order and share payment details. Thank you! 🙏`;
           <h2 className="text-2xl font-bold mb-4 text-green-600">Order Placed Successfully!</h2>
           <p className="mb-2">Thank you for your order!</p>
           <p className="text-sm text-gray-600 mb-6">
-            {paymentMethod === 'whatsapp' 
-              ? '🎉 Your order has been sent via WhatsApp! We\'ll confirm your order and share payment details shortly.' 
-              : 'Your order will be delivered with Cash on Delivery. We\'ve sent you a confirmation email.'
-            }
+            🎉 Your order has been sent via WhatsApp! We&apos;ll confirm your order and share payment details shortly.
           </p>
           <div className="text-sm text-gray-500 mb-6">
             Order Total: ₹{getFinalTotal().toFixed(2)}
@@ -300,7 +287,7 @@ Please confirm this order and share payment details. Thank you! 🙏`;
                             type="radio"
                             value="whatsapp"
                             checked={paymentMethod === 'whatsapp'}
-                            onChange={(e) => setPaymentMethod(e.target.value as 'cod' | 'whatsapp')}
+                            onChange={(e) => setPaymentMethod(e.target.value as 'whatsapp')}
                             className="h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300"
                           />
                           <label htmlFor="whatsapp" className="ml-3 block text-sm font-medium text-gray-700">
@@ -310,21 +297,6 @@ Please confirm this order and share payment details. Thank you! 🙏`;
                         <p className="text-xs text-gray-600 ml-7 mt-1">
                           Send order details via WhatsApp and get payment options (UPI, Bank Transfer, etc.)
                         </p>
-                      </div>
-                      
-                      <div className="flex items-center">
-                        <input
-                          id="cod"
-                          name="payment-method"
-                          type="radio"
-                          value="cod"
-                          checked={paymentMethod === 'cod'}
-                          onChange={(e) => setPaymentMethod(e.target.value as 'cod' | 'whatsapp')}
-                          className="h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300"
-                        />
-                        <label htmlFor="cod" className="ml-3 block text-sm font-medium text-gray-700">
-                          💵 Cash on Delivery
-                        </label>
                       </div>
                     </div>
                   </div>
@@ -343,7 +315,7 @@ Please confirm this order and share payment details. Thank you! 🙏`;
                           </svg>
                           Processing...
                         </span>
-                      ) : paymentMethod === 'cod' ? 'Place Order (COD)' : 'Send Order via WhatsApp 💬'}
+                      ) : 'Send Order via WhatsApp 💬'}
                     </button>
                   </div>
                 </div>
